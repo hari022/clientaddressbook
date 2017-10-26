@@ -1,13 +1,15 @@
 <?php
-
+//Include database and functions file
 include './includes/connection.php';
 include './includes/functions.php';
+//Variable for alert
 $alert = '';
 $loginSuccess='';
 $loginFailed='';
 $registrationFailed='';
 $registrationSuccess='';
 
+//Check for login for submission
 if(isset($_POST['login_submit'])){
     if ($_POST['email'] && $_POST['password']){
 
@@ -24,6 +26,7 @@ if(isset($_POST['login_submit'])){
 
     }
 }
+//Check for register form submission
 elseif (isset($_POST['register_submit'])){
     if ($_POST['fname'] && $_POST['lname'] && $_POST['email'] && $_POST['password']){
 
